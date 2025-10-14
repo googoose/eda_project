@@ -1,98 +1,34 @@
-[![Shipping files](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml)
-# ds-project-template
+# EDA Project  - AIPM course
 
-Template for creating ds simple projects
+Welcome to the EDA project of week 5 in the AIPM course.
 
-## Requirements
+## Short description of the problem
+1.	Through EDA/statistical analysis I will present at least 3 insights regarding the overall data, one of them  geographical.
+2. I will present at least 3 recommendations for my client Erin Robinson. She invests in poor neighborhoods, does buying & selling, wants mainly to have her costs back and make a little profit. She is a socially responsible woman. 
+3. Recommendations will include
+* where to best invest for making a profit (geographically) (even if small).
+* advice for doing renovations and when to do them 
+* emerging areas - still quite cheap but with growing interest
+* what time of the year is best to buy and sell, directed at her area of interest (poor neighborhoods)
+4. Assumptions and information from Erin to better specify her search : 
+* "poor" areas means that it is within the 20% cheapest houses in the county
+* average house condition in area is quite low (average grade is <= 4)
+* house has not been renovated in last 30 years. 
+* overall grade of the unit and condition of house is above average
+* price is relatively cheap
+* plot size is relatively big
+5. Hypothesis
+* There are poor areas that are growing faster than others, making them more interesting
+* Within poor areas, the houses with bigger plots are not much more expensive than the ones with smaller plots (therefor look
+for bigger plots)
+* When doing renovations, prices increase to make a nice but measured profit 
 
-- pyenv
-- python==3.11.3
+## Description of the contents of the repository 
+* <b>EDA.jpynb</b> contains the Jupyter Notebook with the code I've written for this project and comments explaining it. 
 
-## Setup
+* README.md this file that describes the contents of the repository. This file is the source of information for navigating through the repository.
 
-One of the first steps when starting any data science project is to create a virtual environment. For this project you have to create this environment from scratch yourself. However, you should be already familiar with the commands you will need to do so. The general workflow consists of... 
+* <b>EDA_Project_insights.pdf</b> (and EDA_Project_insights.ppt) is a short presentation giving a high-level overview of my methodology and recommendations for my client Erin. 
 
-* setting the python version locally to 3.11.3
-* creating a virtual environment using the `venv` module
-* activating your newly created environment 
-* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
-* installing the required packages via `pip`
+* cleanup.py - a Python script for processing and cleaning my data, using functions and docstrings. 
 
-At the end, you want to make sure that people who are interested in your project can create an identical environment on their own computer in order to be able to run your code without running into errors. Therefore you can create a `requirements file` and add it to your repository. You can create such a file by running the following command: 
-
-```bash
-pip freeze > requirements.txt
-```
-
-*Note: In rare case such a requirements file created with `pip freeze` might not ensure that another (especially M1 chip) user can install and execute it properly. This can happen if libraries need to be compiled (e.g. SciPy). Then it also depends on environment variables and the actual system libraries.*
-
-### Unit testing (Optional)
-
-If you write python scripts for your data processing methods, you can also write unit tests. In order to run the tests execute in terminal:
-
-```bash
-pytest
-```
-
-This command will execute all the functions in your project that start with the word **test**.
-
-## Set up your Environment
-This repo contains a requirements.txt file with a list of all the packages and dependencies you will need.
-
-Before you can start with plotly in Jupyter Lab you have to install node.js (if you haven't done it before).
-- Check **Node version**  by run the following commands:
-    ```sh
-    node -v
-    ```
-    If you haven't installed it yet, begin at `step_1`. Otherwise, proceed to `step_2`.
-
-
-### **`macOS`** type the following commands : 
-
-
-- `Step_1:` Update Homebrew and install Node by following commands:
-    ```sh
-    brew update
-    brew install node
-    ```
-
-- `Step_2:` Install the virtual environment and the required packages by following commands:
-
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
-### **`WindowsOS`** type the following commands :
-
-
-- `Step_1:` Update Chocolatey and install Node by following commands:
-    ```sh
-    choco upgrade chocolatey
-    choco install nodejs
-    ```
-
-- `Step_2:` Install the virtual environment and the required packages by following commands.
-
-   For `PowerShell` CLI :
-
-    ```PowerShell
-    pyenv local 3.11.3
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
-
-    For `Git-Bash` CLI :
-  
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/Scripts/activate
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
- 
