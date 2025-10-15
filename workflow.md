@@ -58,7 +58,7 @@ This is a recommended workflow, especially for people who are on their beginning
 
 ### Exploring the data
 
-- Check distributions of the continuous variables, for example by producing histograms for each of them.
+- Check distributions of  the continuous variables, for example by producing histograms for each of them.
 - Check the distributions for the categorical variables, by producing plots/tables of counts.
 - Look at the histograms and check for clues or patterns: can you identify groups, are the distributions skewed, do you have extreme values or outliers, where is the data centered. Do you need to remove some data?
 
